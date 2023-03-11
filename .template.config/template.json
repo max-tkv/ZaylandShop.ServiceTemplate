@@ -1,10 +1,10 @@
 {
     "$schema": "http://json.schemastore.org/template",
     "author": "Max.Tkv",
-    "classifications": [ "Common", "Web" ],
+    "classifications": [ "Web", "ASP.NET" ],
     "identity": "ZaylandShop.ServiceTemplate",
-    "name": "ZaylandShop service templates",
-    "shortName": "ZaylandShopServiceTemplate",
+    "name": "ZaylandShopServiceTemplate",
+    "shortName": "zls",
     "tags": {
       "language": "C#",
       "type": "project"

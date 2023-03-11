@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZaylandShop.ServiceTemplate
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZaylandShop.ServiceTemplate.UnitTests", "ZaylandShop.ServiceTemplate.UnitTests\ZaylandShop.ServiceTemplate.UnitTests.csproj", "{43B74874-DAF3-48A0-A910-160D70040A43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZaylandShop.ServiceTemplate.Contracts", "ZaylandShop.ServiceTemplate.Contracts\ZaylandShop.ServiceTemplate.Contracts.csproj", "{2DC9B915-216A-4D8C-88D3-C60524D916DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{43B74874-DAF3-48A0-A910-160D70040A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43B74874-DAF3-48A0-A910-160D70040A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43B74874-DAF3-48A0-A910-160D70040A43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DC9B915-216A-4D8C-88D3-C60524D916DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DC9B915-216A-4D8C-88D3-C60524D916DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DC9B915-216A-4D8C-88D3-C60524D916DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DC9B915-216A-4D8C-88D3-C60524D916DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

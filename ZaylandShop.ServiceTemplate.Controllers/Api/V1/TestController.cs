@@ -1,5 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using ZaylandShop.ServiceTemplate.Controllers.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using AutoMapper;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using ZaylandShop.ServiceTemplate.Entities;
+using ZaylandShop.ServiceTemplate.Utils.ApiResponse;
 
 namespace ZaylandShop.ServiceTemplate.Controllers.Api.V1;
 
@@ -8,17 +12,22 @@ namespace ZaylandShop.ServiceTemplate.Controllers.Api.V1;
 [ApiController]
 public class TestController : Controller
 {
+    private readonly IMapper _mapper;
 
-    public TestController()
+    public TestController(IMapper mapper)
     {
+        _mapper = mapper;
     }
 
     [HttpGet]
-    public IActionResult Test(string data)
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(ApiResponseResult<Contracts.Models.User>))]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ApiResponse))]
+    [Consumes("application/json")]
+    [Produces("application/json")]
+    public async Task<ApiResponseResult<Contracts.Models.User>> Test([Required] string data)
     {
-        return Ok(new Test()
-        {
-            Name = data
-        });
+        var user = new AppUser();
+        var dto = _mapper.Map<Contracts.Models.User>(user);
+        return ApiResponse.CreateSuccess(dto);
     }
 }

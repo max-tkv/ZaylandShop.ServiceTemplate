@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc.ApiExplorer;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
 using ZaylandShop.ServiceTemplate.Controllers;
+using ZaylandShop.ServiceTemplate.Controllers.Mappings;
 using ZaylandShop.ServiceTemplate.Integration.Test.Extensions;
 using ZaylandShop.ServiceTemplate.Storage;
 using ZaylandShop.ServiceTemplate.Web.Configuration;
@@ -23,6 +25,14 @@ public class Startup
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton(new MapperConfiguration(mc =>
+            {
+                mc.AddProfiles(new Profile[]
+                {
+                    new TestControllerMappingProfile()
+                });
+            }).CreateMapper());
+            
             services.AddControllers().AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.PropertyNamingPolicy = null;

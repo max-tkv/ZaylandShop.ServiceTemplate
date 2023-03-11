@@ -1,6 +1,6 @@
 {
     "$schema": "http://json.schemastore.org/template",
-    "author": "Me",
+    "author": "Max.Tkv",
     "classifications": [ "Common", "Web" ],
     "identity": "ZaylandShop.ServiceTemplate",
     "name": "ZaylandShop service templates",

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\ZaylandShop.ServiceTemplate.Controllers.xml</DocumentationFile>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.14" />
+      <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ZaylandShop.ServiceTemplate\ZaylandShop.ServiceTemplate.csproj" />
+    </ItemGroup>
+
+</Project>

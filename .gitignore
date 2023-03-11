@@ -1,0 +1,13 @@
+﻿.idea
+ZaylandShop.ServiceTemplate/obj
+ZaylandShop.ServiceTemplate.Controllers/obj
+ZaylandShop.ServiceTemplate.Storage/obj
+ZaylandShop.ServiceTemplate.Web/obj
+obj
+ZaylandShop.ServiceTemplate/bin
+ZaylandShop.ServiceTemplate.Controllers/bin
+ZaylandShop.ServiceTemplate.Storage/bin
+ZaylandShop.ServiceTemplate.Web/bin
+ZaylandShop.ServiceTemplate.Integration.Test/bin
+ZaylandShop.ServiceTemplate.Utils/bin
+ZaylandShop.ServiceTemplate.Web/Logs

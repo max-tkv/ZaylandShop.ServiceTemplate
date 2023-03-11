@@ -8,5 +8,39 @@
     "tags": {
       "language": "C#",
       "type": "project"
-    }
+    },
+    "preferNameDirectory": true,
+    "sourceName": "ZaylandShop.ServiceTemplate",
+    "symbols": {
+        "projectName": {
+            "type": "parameter",
+            "datatype": "string",
+            "description": "The name of the project.",
+            "defaultValue": "ZaylandShop.ServiceTemplate"
+        },
+        "namespace": {
+            "type": "parameter",
+            "datatype": "string",
+            "description": "The namespace of the project.",
+            "defaultValue": "ZaylandShop.ServiceTemplate"
+        }
+    },
+    "sources": [
+        {
+            "modifiers": [
+                {
+                    "condition": "$projectName$ != ''",
+                    "rename": {
+                        "files": [
+                            "ZaylandShop.ServiceTemplate.csproj"
+                        ],
+                        "exclude": [
+                            "obj/**",
+                            "bin/**"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
 }

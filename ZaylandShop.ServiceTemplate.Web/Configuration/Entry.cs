@@ -40,7 +40,7 @@ public static class Entry
             {
                 c.SwaggerEndpoint(
                     $"/swagger/{description.GroupName}/swagger.json",
-                    $"{nameof(ServiceTemplate)} API {description.GroupName}");
+                    $"{nameof(ZaylandShop.ServiceTemplate)} API {description.GroupName}");
             }
                     
             c.RoutePrefix = "swagger";
